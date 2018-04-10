@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location Demo</title>
+      <link rel="icon" type="image/png" href="img/favicon.png">
+        <script src="js/myjs.js"></script>
+    <style>
+      body,html {height:100%}
+      #map {width:50%;height:50%; padding: 10%; margin: auto;}
+      h3{font-family: sans-serif; text-align: center; padding-top: 10%;}
+    </style>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    <script>
+      var map; 
+      function initGeolocation() {
+        if (navigator && navigator.geolocation) {
+        var watchId = navigator.geolocation.watchPosition(successCallback, 
+          errorCallback,
+          {enableHighAccuracy:true,timeout:60000,maximumAge:0});
+
+        } else {
+          console.log('Geolocation is not supported');
+        }
+      }
+     
+      function errorCallback() {}
+
+      function successCallback(position) {
+        var myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        if(map == undefined) {
+          var myOptions = {
+            zoom: 17,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          map = new google.maps.Map(document.getElementById("map"), myOptions);
+        }
+        else map.panTo(myLatlng);
+    }
+
+
+    </script>
+  </head>
+  <h3>Click "allow" to see your location!</h3>
+  <body onload="javascript:initGeolocation()">
+    <div id="map">
+    </div>
+  </body>
+</html>

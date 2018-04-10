@@ -1,0 +1,144 @@
+
+
+*{ box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+}
+
+h1{
+	font-size: 2.5em;
+	font-family: sans-serif;
+	color: #ff931e;}
+
+ h2{
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: #d6406d;}
+
+p { 
+	font-size: 1.1em;
+  width: 60%;
+	margin: auto;
+	text-align: center;
+}
+body{
+	font-family: sans-serif;
+	text-align: center;
+}
+
+
+
+.topnav {
+  width: 100%;
+ position: fixed;
+  background-color: #78c3cf;    
+    z-index: 3;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #4f9aa6;
+  color: white;
+}
+
+
+.topnav select {
+ display: none;
+ float: left;
+ margin: 2em;
+}
+
+
+
+.page {
+    text-align: center;
+    position: relative;
+    padding: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.button {
+    
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 50px;
+      background-color: white; 
+    color: #d6406d; 
+    border: 3px dotted #d6406d;
+    margin: auto;
+    position: relative;
+    display: block; 
+    text-decoration: none !important;
+      margin-top: 1.5em;
+}
+
+
+.button:hover, .button a :hover {
+    background-color: #d6406d;
+    color: white;
+}
+
+
+ img {
+    width: 100%;
+    height: auto;
+}
+
+
+#about {
+
+    padding: 10%;
+}
+
+.responsive {
+    padding: 1%;
+    display: inline-block;
+    width: 15%;
+    position: relative;
+}
+
+
+.responsive1 {
+    padding: 1%;
+    display: inline-block;
+    width: 50%;
+    position: relative;
+}
+
+
+@media (max-width: 700px) {
+ .topnav a { display: none; }
+ .topnav select { display: inline-block; }
+
+ .responsive{
+   display: block; 
+   position: relative;
+   margin: auto;}
+
+.page {padding-top: 10%;}
+
+h1 {font-size: 2em;} 
+
+}
+
+
+
+
